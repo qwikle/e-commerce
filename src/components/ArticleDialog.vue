@@ -3,9 +3,11 @@
     :open="props.opened"
     class="w-full h-screen bg-black opacity-80 z-10 absolute top-0"
   >
-    <div class="flex justify-center mx-auto border h-1/3 w-1/3 relative my-60">
+    <div
+      class="flex justify-center mx-auto border rounded-lg h-1/3 w-1/3 relative my-60"
+    >
       <button
-        class="w-5 h-5 flex justify-center items-center absolute -top-12 -right-2 group"
+        class="w-5 h-5 flex justify-center items-center absolute -top-8 -right-2 group"
         @click="emit('closeModal')"
       >
         <svg
