@@ -1,11 +1,15 @@
 <template>
   <div class="lg:flex lg:flex-col lg:gap-y-5 lg:w-1/2 h-full">
-    <figure
-      @click="toogleDialog()"
-      class="w-full flex justify-center hover:cursor-pointer"
-    >
+    <figure class="w-full flex justify-center hover:cursor-pointer">
       <div class="relative h-full w-full">
-        <img :src="state.image" alt="" class="lg:rounded-lg" />
+        <img
+          :src="state.image"
+          alt=""
+          class="lg:rounded-lg lg:block hidden"
+          @click="toogleDialog()"
+        />
+        <img :src="state.image" alt="" class="lg:rounded-lg lg:hidden" />
+
         <button
           class="h-10 w-10 bg-white flex justify-center items-center rounded-full lg:hidden absolute top-1/2 left-5"
         >
