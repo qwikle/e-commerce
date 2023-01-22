@@ -44,14 +44,14 @@ import { reactive } from "vue";
 const state = reactive({
   opened: false,
   image: "../../images/image-product-1.jpg",
-  currentImage: "1",
+  currentImage: 1,
 });
 
 function toogleDialog() {
   state.opened = !state.opened;
 }
 
-function showImage(id: string) {
+function showImage(id: number) {
   const src = imagesArticles.find((e) => e.id === id)?.src;
   state.image = src ? src : state.image;
   state.currentImage = id;

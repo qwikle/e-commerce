@@ -14,11 +14,11 @@
 const props = defineProps<{
   src: string;
   alt: string;
-  id: string;
+  id: number;
   active: boolean;
 }>();
 const emit = defineEmits<{
-  (e: "itemSelected", id: string): void;
+  (e: "itemSelected", id: number): void;
 }>();
 </script>
 <style scoped></style>
