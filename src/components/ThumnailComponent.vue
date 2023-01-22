@@ -4,8 +4,10 @@
     @click="emit('itemSelected', id)"
   >
     <div
-      class="bg-white opacity-70 w-full h-full rounded-md absolute group-hover:block"
-      :class="active ? 'border-2 border-[#ff7d1a] ' : 'hidden'"
+      class="bg-white w-full h-full rounded-md absolute group-hover:block"
+      :class="
+        active ? 'border-2 border-[#ff7d1a] opacity-70' : 'hidden opacity-50'
+      "
     ></div>
     <img :src="src" :alt="alt" class="rounded-md" />
   </div>
