@@ -1,5 +1,5 @@
 <template>
-  <div class="relative md:w-1/3">
+  <div class="relative lg:w-1/3">
     <input
       class="bg-slate-100 border-none rounded-lg w-full shadow-sm h-14 text-center font-bold"
       type="text"

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="flex justify-center items-center gap-3 bg-[#ff7d1a] h-14 rounded-lg shadow-[#ff7f1a] text-white font-bold shadow-sm md:w-2/3"
+    class="flex justify-center items-center gap-3 bg-[#ff7d1a] h-14 rounded-lg shadow-[#ff7f1a] text-white font-bold shadow-sm lg:w-2/3"
   >
     <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
       <path

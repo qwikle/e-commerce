@@ -3,15 +3,13 @@
     :open="props.opened"
     class="w-full h-screen bg-black opacity-80 z-10 absolute top-0"
   >
-    <div
-      class="flex justify-center mx-auto items-center border h-1/3 w-1/3 relative my-60"
-    >
+    <div class="flex justify-center mx-auto border h-1/3 w-1/3 relative my-60">
       <button
-        class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full absolute"
+        class="w-5 h-5 flex justify-center items-center absolute -top-12 -right-2 group"
         @click="emit('closeModal')"
       >
         <svg
-          class="h-full w-full fill-white"
+          class="w-5 h-5 fill-white group-hover:fill-[#ff7d1a]"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

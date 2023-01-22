@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col md:flex-row w-full gap-5 md:px-10 md:gap-20"
+    class="flex flex-col lg:flex-row w-full gap-5 lg:px-10 lg:gap-20"
   >
     <ImagesArticle />
     <DescriptionArticle />

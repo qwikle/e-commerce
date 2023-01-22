@@ -2,14 +2,16 @@
 import RouterView from 'route'
 <template>
   <header
-    class="h-16 md:h-28 flex md:mx-20 md:justify-between justify-around items-center z-10 sticky top-0 bg-white md:border-b-2"
+    class="h-16 lg:h-28 flex lg:mx-20 lg:justify-between justify-around items-center z-10 sticky top-0 bg-white lg:border-b-2"
   >
-    <div class="flex items-center md:gap-10 gap-1 h-full">
-      <button class="w-8 h-8 md:hidden">
+    <div class="flex items-center lg:gap-10 gap-1 h-full">
+      <button class="w-8 h-8 lg:hidden">
         <img src="../images/icon-menu.svg" alt="icon menu button" />
       </button>
-      <img src="../../images/logo.svg" alt="sneakers logo" />
-      <ul class="md:flex gap-4 hidden text-slate-500 h-full items-center">
+      <router-link to="/"
+        ><img src="../../images/logo.svg" alt="sneakers logo"
+      /></router-link>
+      <ul class="lg:flex gap-4 hidden text-slate-500 h-full items-center">
         <li class="h-full flex items-center group">
           <a
             href="#"
@@ -38,7 +40,7 @@ import RouterView from 'route'
       </button>
     </div>
   </header>
-  <main class="md:mt-20 md:mx-20">
+  <main class="lg:mt-20 lg:mx-20">
     <router-view />
   </main>
 </template>
