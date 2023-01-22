@@ -5,11 +5,7 @@
       class="w-full flex justify-center hover:cursor-pointer"
     >
       <div class="relative h-full w-full">
-        <img
-          src="../../images/image-product-1.jpg"
-          alt=""
-          class="lg:rounded-lg"
-        />
+        <img :src="state.image" alt="" class="lg:rounded-lg" />
         <button
           class="h-10 w-10 bg-white flex justify-center items-center rounded-full lg:hidden absolute top-1/2 left-5"
         >
@@ -27,6 +23,9 @@
         <ThumnailComponent
           :src="imageArticle.thumbnail.src"
           :alt="imageArticle.thumbnail.alt"
+          :id="imageArticle.id"
+          :active="imageArticle.id === state.currentImage"
+          @item-selected="(id) => showImage(id)"
         />
       </template>
     </div>
@@ -38,10 +37,20 @@ import ArticleDialog from "@/components/ArticleDialog.vue";
 import ThumnailComponent from "@/components/ThumnailComponent.vue";
 import imagesArticles from "@/data/images";
 import { reactive } from "vue";
-const state = reactive({ opened: false });
+const state = reactive({
+  opened: false,
+  image: "../../images/image-product-1.jpg",
+  currentImage: "1",
+});
 
 function toogleDialog() {
   state.opened = !state.opened;
+}
+
+function showImage(id: string) {
+  const src = imagesArticles.find((e) => e.id === id)?.src;
+  state.image = src ? src : state.image;
+  state.currentImage = id;
 }
 </script>
 <style scoped></style>
