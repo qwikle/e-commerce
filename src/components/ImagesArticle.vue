@@ -23,43 +23,20 @@
       </div>
     </figure>
     <div class="lg:flex w-full gap-x-2 hidden">
-      <div class="group relative">
-        <div
-          class="bg-white opacity-70 w-full h-full rounded-md absolute hidden group-hover:block"
-        ></div>
-        <img
-          src="../../images/image-product-1-thumbnail.jpg"
-          alt=""
-          class="rounded-md"
+      <template v-for="imageArticle in imagesArticles">
+        <ThumnailComponent
+          :src="imageArticle.thumbnail.src"
+          :alt="imageArticle.thumbnail.alt"
         />
-      </div>
-      <div class="">
-        <img
-          src="../../images/image-product-2-thumbnail.jpg"
-          alt=""
-          class="rounded-md"
-        />
-      </div>
-      <div class="">
-        <img
-          src="../../images/image-product-3-thumbnail.jpg"
-          alt=""
-          class="rounded-md"
-        />
-      </div>
-      <div class="">
-        <img
-          src="../../images/image-product-4-thumbnail.jpg"
-          alt=""
-          class="rounded-md"
-        />
-      </div>
+      </template>
     </div>
   </div>
   <ArticleDialog :opened="state.opened" @close-modal="toogleDialog()" />
 </template>
 <script setup lang="ts">
 import ArticleDialog from "@/components/ArticleDialog.vue";
+import ThumnailComponent from "@/components/ThumnailComponent.vue";
+import imagesArticles from "@/data/images";
 import { reactive } from "vue";
 const state = reactive({ opened: false });
 
