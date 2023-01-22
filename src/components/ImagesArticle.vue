@@ -19,19 +19,22 @@
         </button>
       </div>
     </figure>
-    <div class="md:flex w-full gap-4 hidden">
-      <div class="">
+    <div class="md:flex w-full gap-x-2 hidden">
+      <div class="group relative">
+        <div
+          class="bg-white opacity-70 w-full h-full rounded-md absolute hidden group-hover:block hover:border-2 hover:rounded-md hover:border-[#f77d1a]"
+        ></div>
         <img
           src="../../images/image-product-1-thumbnail.jpg"
           alt=""
           class="rounded-md"
         />
       </div>
-      <div class="border-4 border-[#f77d1a] rounded-md">
+      <div class="">
         <img
           src="../../images/image-product-2-thumbnail.jpg"
           alt=""
-          class="l"
+          class="rounded-md"
         />
       </div>
       <div class="">
@@ -59,11 +62,6 @@ const state = reactive({ opened: false });
 
 function toogleDialog() {
   state.opened = !state.opened;
-  console.log(state.opened);
-}
-
-function log() {
-  console.log("event cliqued");
 }
 </script>
 <style scoped></style>
